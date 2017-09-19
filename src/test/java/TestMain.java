@@ -7,11 +7,11 @@ import static org.junit.Assert.*;
 
 public class TestMain {
 
-    Inteligencia i;
+    Inteligencia main;
 
     @Before
     public void setUp() {
-        this.i = new Inteligencia();
+        this.main = new Inteligencia();
     }
 
     @After
@@ -23,20 +23,31 @@ public class TestMain {
     @Test
     public void mainExists()
     {
-        assertNotNull(i);
-        assertEquals(Inteligencia.class, i.getClass());
+        assertNotNull(main);
+        assertEquals(Inteligencia.class, main.getClass());
     }
 
     @Test
-    public void dataGetterReturnsData()
+    public void setUrlViaSource()
     {
-        String data = i.getDataFrom(Parameters.SOURCE_GOOGLE);
-        assertTrue(null != data.toString());
+        String[] urls = {"http://duckduckgo.com", "http://google.co.uk", "http://bing.com"};
+
+        this.main.setUrl(Parameters.SOURCE_GOOGLE);
+        assertNotEquals(urls[0],main.getUrl());
+        assertNotEquals(urls[2],main.getUrl());
+        assertEquals(urls[1], main.getUrl());
+
+        this.main.setUrl(Parameters.SOURCE_BING);
+        assertNotEquals(urls[0],main.getUrl());
+        assertNotEquals(urls[1],main.getUrl());
+        assertEquals(urls[2], main.getUrl());
+
+        this.main.setUrl(Parameters.SOURCE_DUCK);
+        assertNotEquals(urls[1],main.getUrl());
+        assertNotEquals(urls[2],main.getUrl());
+        assertEquals(urls[0], main.getUrl());
+
     }
 
-    @Test
-    public void confirmApiIsAlive()
-    {
-        this.i.getDataFrom(Parameters.SOURCE_GOOGLE);
-    }
+
 }
