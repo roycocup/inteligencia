@@ -1,4 +1,4 @@
-package rodderscode.co.uk.utils;
+package utils;
 
 public enum Parameters {
     SOURCE_GOOGLE,

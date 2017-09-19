@@ -1,6 +1,4 @@
-package rodderscode.co.uk;
-
-import rodderscode.co.uk.utils.Parameters;
+import utils.Parameters;
 
 public class Inteligencia {
 

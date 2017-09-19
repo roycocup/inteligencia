@@ -1,4 +1,4 @@
-package rodderscode.co.uk.models;
+package models;
 
 public class Google implements Model {
 

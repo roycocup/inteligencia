@@ -1,4 +1,5 @@
-package rodderscode.co.uk.models;
+
+package models;
 
 public interface Model {
 

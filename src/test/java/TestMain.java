@@ -1,8 +1,7 @@
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import rodderscode.co.uk.Inteligencia;
-import rodderscode.co.uk.utils.Parameters;
+import utils.Parameters;
 
 import static org.junit.Assert.*;
 
