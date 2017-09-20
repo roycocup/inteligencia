@@ -5,8 +5,8 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 
 @Suite.SuiteClasses({
-        TestJunit.class,
-        TestMain.class
+        TestMain.class,
+        TestDataTransfer.class
 })
 
 public class TestSuite {
